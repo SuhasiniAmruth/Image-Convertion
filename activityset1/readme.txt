@@ -23,15 +23,16 @@ X-DSPAM-Confidence:    0.8475
 X-DSPAM-Confidence: 0.8475
 Count these lines and extract the floating point values from each of the lines and compute the average of those values and produce an output as shown below. Do not use the sum() function or a variable named sum in your solution. You can download the sample data at http://www.py4e.com/code3/mbox-short.txt.
 When you are testing below enter mbox-short.txt as the file name.
-Open the file romeo.txt and read it line by line. For each line, split the line into a list of words using the split() method. The program should build a list of words. For each word on each line check to see if the word is already in the list and if not append it to the list. When the program completes, sort and print the resulting words in alphabetical order. You can download the sample data at http://www.py4e.com/code3/romeo.txt
-Open the file mbox-short.txt and read it line by line. When you find a line that starts with 'From ' like the following line:
+9. Open the file romeo.txt and read it line by line. For each line, split the line into a list of words using the split() method. The program should build a list of words. For each word on each line check to see if the word is already in the list and if not append it to the list. When the program completes, sort and print the resulting words in alphabetical order. You can download the sample data at http://www.py4e.com/code3/romeo.txt
+10. Open the file mbox-short.txt and read it line by line. When you find a line that starts with 'From ' like the following line:
 From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
 You will parse the From line using split() and print out the second word in the line (i.e. the entire address of the person who sent the message). Then print out a count at the end.Hint: make sure not to include the lines that start with 'From:'. Also look at the last line of the sample output to see how to print the count.You can download the sample data at http://www.py4e.com/code3/mbox-short.txt
-Write a program to read through the mbox-short.txt and figure out who has sent the greatest number of mail messages. The program looks for 'From ' lines and takes the second word of those lines as the person who sent the mail. The program creates a Python dictionary that maps the sender's mail address to a count of the number of times they appear in the file. After the dictionary is produced, the program reads through the dictionary using a maximum loop to find the most prolific committer.
-Write a program to read through the mbox-short.txt and figure out the distribution by hour of the day for each of the messages. You can pull the hour out from the 'From ' line by finding the time and then splitting the string a second time using a colon.
+11. Write a program to read through the mbox-short.txt and figure out who has sent the greatest number of mail messages. The program looks for 'From ' lines and takes the second word of those lines as the person who sent the mail. The program creates a Python dictionary that maps the sender's mail address to a count of the number of times they appear in the file. After the dictionary is produced, the program reads through the dictionary using a maximum loop to find the most prolific committer.
+12. Write a program to read through the mbox-short.txt and figure out the distribution by hour of the day for each of the messages. You can pull the hour out from the 'From ' line by finding the time and then splitting the string a second time using a colon.
 From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
 Once you have accumulated the counts for each hour, print out the counts, sorted by hour.
-Finding Numbers in a Haystack
+
+13. Finding Numbers in a Haystack
 In this assignment you will read through and parse a file with text and numbers. You will extract all the numbers in the file and compute the sum of the numbers.
 Data Files
 We provide two files for this assignment. One is a sample file where we give you the sum for your testing and the other is the actual data you need to process for the assignment.
@@ -45,13 +46,15 @@ The sum for the sample text above is 27486. The numbers can appear anywhere in t
 Handling The Data
 The basic outline of this problem is to read the file, look for integers using the re.findall(), looking for a regular expression of '[0-9]+' and then converting the extracted strings to integers and summing up the integers.
  
-Exploring the HyperText Transport Protocol
+14. Exploring the HyperText Transport Protocol
 You are to retrieve the following document using the HTTP protocol in a way that you can examine the HTTP Response headers.
 http://data.pr4e.org/intro-short.txt
 There are three ways that you might retrieve this web page and look at the response headers:
 Preferred: Modify the socket1.py program to retrieve the above URL and print out the headers and data. Make sure to change the code to retrieve the above URL - the values are different for each URL.
 Open the URL in a web browser with a developer console or FireBug and manually examine the headers that are returned.
-Scraping Numbers from HTML using BeautifulSoup In this assignment you will write a Python program similar to http://www.py4e.com/code3/urllink2.py. The program will use urllib to read the HTML from the data files below, and parse the data, extracting numbers and compute the sum of the numbers in the file.
+
+
+15. Scraping Numbers from HTML using BeautifulSoup In this assignment you will write a Python program similar to http://www.py4e.com/code3/urllink2.py. The program will use urllib to read the HTML from the data files below, and parse the data, extracting numbers and compute the sum of the numbers in the file.
 We provide two files for this assignment. One is a sample file where we give you the sum for your testing and the other is the actual data you need to process for the assignment.
 Sample data: http://py4e-data.dr-chuck.net/comments_42.html (Sum=2553)
 Actual data: http://py4e-data.dr-chuck.net/comments_1406590.html (Sum ends with 76)
@@ -65,7 +68,7 @@ Look at the sample code provided. It shows how to find all of a certain kind of 
 You need to adjust this code to look for span tags and pull out the text content of the span tag, convert them to integers and add them up to complete the assignment.
 Sample Execution
 
-Following Links in Python
+16. Following Links in Python
 In this assignment you will write a Python program that expands on http://www.py4e.com/code3/urllinks.py. The program will use urllib to read the HTML from the data files below, extract the href= vaues from the anchor tags, scan for a tag that is in a particular position relative to the first name in the list, follow that link and repeat the process a number of times and report the last name you find.
 We provide two files for this assignment. One is a sample file where we give you the name for your testing and the other is the actual data you need to process for the assignment
 Sample problem: Start at http://py4e-data.dr-chuck.net/known_by_Fikret.html
@@ -81,7 +84,9 @@ Sample execution
 Here is a sample execution of a solution:
 
 The answer to the assignment for this execution is "Anayah".
-Extracting Data from XML
+
+
+17. Extracting Data from XML
 In this assignment you will write a Python program somewhat similar to http://www.py4e.com/code3/geoxml.py. The program will prompt for a URL, read the XML data from that URL using urllib and then parse and extract the comment counts from the XML data, compute the sum of the numbers in the file.
 We provide two files for this assignment. One is a sample file where we give you the sum for your testing and the other is the actual data you need to process for the assignment.
 Sample data: http://py4e-data.dr-chuck.net/comments_42.xml (Sum=2553)
@@ -96,7 +101,7 @@ To make the code a little simpler, you can use an XPath selector string to look 
 Take a look at the Python ElementTree documentation and look for the supported XPath syntax for details. You could also work from the top of the XML down to the comments node and then loop through the child nodes of the comments node.
 Sample Execution
 
-Extracting Data from JSON
+18. Extracting Data from JSON
 In this assignment you will write a Python program somewhat similar to http://www.py4e.com/code3/json2.py. The program will prompt for a URL, read the JSON data from that URL using urllib and then parse and extract the comment counts from the JSON data, compute the sum of the numbers in the file and enter the sum below:
 We provide two files for this assignment. One is a sample file where we give you the sum for your testing and the other is the actual data you need to process for the assignment.
 Sample data: http://py4e-data.dr-chuck.net/comments_42.json (Sum=2553)
@@ -108,7 +113,7 @@ The data consists of a number of names and comment counts in JSON as follows:
 The closest sample code that shows how to parse JSON and extract a list is json2.py. You might also want to look at geoxml.py to see how to prompt for a URL and retrieve data from a URL.
 Sample Execution
 
-Calling a JSON API
+19. Calling a JSON API
 In this assignment you will write a Python program somewhat similar to http://www.py4e.com/code3/geojson.py. The program will prompt for a location, contact a web service and retrieve JSON for the web service and parse that data, and retrieve the first place_id from the JSON. A place ID is a textual identifier that uniquely identifies a place as within Google Maps.
 API End Points
 To complete this assignment, you should use this API endpoint that has a static subset of the Google Data:
